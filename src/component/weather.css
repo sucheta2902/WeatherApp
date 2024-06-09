@@ -65,3 +65,10 @@ button{
     outline: none;
     border: none;
 }
+.date span{
+    position: absolute;
+    
+   top:320px;
+   left: 90px;
+
+}
