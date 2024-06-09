@@ -33,7 +33,14 @@ const Weather = () => {
     const we=setSearchCity(city)
     console.log(we)
   }
-   
+    const getCurrentDate=()=>{
+    return new Date().toLocaleDateString("en-us",{
+weekday:"long",
+month :"long",
+day:"numeric",
+year:"numeric"
+    })
+   }
   
   return (
     <div className="weather">
@@ -49,6 +56,9 @@ const Weather = () => {
         <p className='nme'>{weatherData.name}</p>
         </div>
         </div>
+           <div className='date'>
+<span>{getCurrentDate()}</span>
+</div>
          <div className="weather-details" style={{ position: "absolute",bottom:"50px"}}>
           <div className="col">
           <img src={humidity_icon}/>
